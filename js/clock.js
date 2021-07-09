@@ -7,7 +7,7 @@ function clockTimer(){
     const minutes = String(today.getMinutes()).padStart(2,"0");
     const seconds = String(today.getSeconds()).padStart(2,"0");
     clcokTitle.innerText = `${hours}:${minutes}:${seconds}`
-    console.log(hours);
+
 }
 
 clockTimer();

@@ -12,7 +12,6 @@ const changeBgImg = bgimg[Math.floor(Math.random()*bgimg.length)];
 
 const addImg = document.createElement("img");
 
-
 addImg.src = `img/${changeBgImg}`;
 
 document.body.appendChild(addImg);

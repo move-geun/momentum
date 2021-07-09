@@ -25,5 +25,3 @@ if (savedUserName === null) {
 } else{
    paintGreetings(savedUserName);
 }
-
-console.log(savedUserName);
