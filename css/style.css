@@ -13,7 +13,7 @@ body {
   position: relative;
 }
 
-.weatherbox{
+.weatherbox {
   color: white;
   position: absolute;
   font-size: 20px;
@@ -27,10 +27,9 @@ body {
   align-items: center;
 }
 
-.weatherbox span{
+.weatherbox span {
   font-size: 20px;
 }
-
 
 .bagImg {
   position: absolute;
@@ -129,7 +128,6 @@ body {
   padding: 5px;
   border-radius: 10px;
   position: relative;
-  wrap
 }
 
 .quote span:last-child {
@@ -139,7 +137,7 @@ body {
   position: absolute;
   left: 35%;
   min-width: 30%;
-  text-align:center;
+  text-align: center;
 }
 
 .quote:hover .flip {
@@ -165,4 +163,3 @@ body {
 .back {
   transform: rotateY(180deg);
 }
-
