@@ -1,3 +1,168 @@
+@import "reset.css";
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+
+/**basic**/
+body {
+  font-family: "Bebas Neue", cursive;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.weatherbox{
+  color: white;
+  position: absolute;
+  font-size: 20px;
+  height: 40px;
+  width: 300px;
+  background-color: rgba(0, 0, 0, 0.1);
+  top: 0px;
+  right: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.weatherbox span{
+  font-size: 20px;
+}
+
+
+.bagImg {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+}
+.greeting {
+  font-size: 50px;
+  margin-top: 50px;
+}
+
 .hidden {
   display: none;
 }
+
+.clock {
+  font-size: 15vh;
+}
+
+.login-box input {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom-color: black;
+  background-color: transparent;
+  text-align: center;
+  font-size: 50px;
+  border-bottom-width: 2px;
+}
+.login-box input::placeholder {
+  color: black;
+  font-size: 50px;
+  font-family: "Bebas Neue", cursive;
+}
+
+.todo {
+  margin-top: 50px;
+}
+
+.todo input {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom-color: black;
+  border-bottom-width: 2px;
+  background: transparent;
+  text-align: center;
+  font-size: 40px;
+  color: black;
+}
+
+.todo input::placeholder {
+  color: black;
+  font-size: 40px;
+  font-family: "Bebas Neue", cursive;
+}
+
+.todo-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 30px;
+  color: black;
+  font-family: "Bebas Neue", cursive;
+}
+
+.todoSpan {
+  display: flex;
+
+  align-items: center;
+}
+
+.todoSpan button {
+  margin-right: 10px;
+  font-size: 30px;
+  border: none;
+  background: transparent;
+}
+
+.quote {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  padding: 10px;
+}
+
+.quote span:first-child {
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 5px;
+  border-radius: 10px;
+  position: relative;
+  wrap
+}
+
+.quote span:last-child {
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 8px;
+  border-radius: 10px;
+  position: absolute;
+  left: 35%;
+  min-width: 30%;
+  text-align:center;
+}
+
+.quote:hover .flip {
+  transform: rotateY(-180deg);
+}
+
+.flip {
+  position: relative;
+  display: flex;
+  align-items: center;
+  color: white;
+  text-align: center;
+  transform-style: preserve-3d;
+  transform: rotateY(0deg);
+  transition: 1.3s;
+}
+.front,
+.back {
+  position: absolute;
+  backface-visibility: hidden;
+}
+
+.back {
+  transform: rotateY(180deg);
+}
+

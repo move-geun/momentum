@@ -7,10 +7,7 @@ const quotes = [
         quote: "The past can hurt, but the way I see it, you can either run from it or learn from it. ",
         author: "Lion King",
     },
-    {
-        quote: "You must not let anyone define your limits because of where you come from. Your only limit is you soul.",
-        author: "Ratatouille",
-    },
+  
     {
         quote: "Today's special moments are tomorrow's memories.",
         author: "Aladdin",
@@ -59,10 +56,7 @@ const quotes = [
         quote: "Don't spend your time lookin' around for something you want that can't be found",
         author: "Jungle book",
     },
-    {
-        quote: "When life gets you down, do you wanna know what you've gotta do? Just keep swimming, swimming and swimming",
-        author: "Finding Nemo",
-    },
+  
 ]
 const quote = document.querySelector(".quote span:first-child");
 const author = document.querySelector(".quote span:last-child");

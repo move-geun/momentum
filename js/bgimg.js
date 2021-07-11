@@ -5,12 +5,14 @@ const bgimg = ["0.jpg",
                "4.jpg",
                "5.jpg", 
                "6.jpg", 
-               "7.jpg",
+              
 ]
 
 const changeBgImg = bgimg[Math.floor(Math.random()*bgimg.length)];
 
 const addImg = document.createElement("img");
+
+addImg.classList.add("bagImg");
 
 addImg.src = `img/${changeBgImg}`;
 

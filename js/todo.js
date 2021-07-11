@@ -19,12 +19,14 @@ function delList(event){
 function addList(newToDo){
    const li = document.createElement("li");
    li.id = newToDo.id;
+   const deletbtn = document.createElement("button");
+   deletbtn.innerText = "✔";
    const span = document.createElement("span");
    span.innerText = newToDo.text;
-   const deletbtn = document.createElement("button");
-   deletbtn.innerText = "❌";
-   li.appendChild(span);
+   
+   li.classList.add("todoSpan")
    li.appendChild(deletbtn);
+   li.appendChild(span);
    toDoList.appendChild(li);
    deletbtn.addEventListener("click",delList);
 }
