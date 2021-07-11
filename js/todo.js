@@ -1,23 +1,26 @@
 const toDoForm = document.querySelector(".todo")
 const toDoInput = document.querySelector(".todo input")
 const toDoList = document.querySelector(".todo-list")
-const toDos = []
+let toDos = []
+
+const TODO_KEY = "todos"
 
 function saveToDos(){
-    localStorage.setItem("todos", JSON.stringify(toDos));
+    localStorage.setItem(TODO_KEY, JSON.stringify(toDos));
 }
 
 function delList(event){
-    console.log(event);
     const li = event.target.parentElement;
     li.remove();
-
+    toDos = toDos.filter((toDo) => toDo.id !== parseInt(li.id));
+    saveToDos();
 }
 
 function addList(newToDo){
    const li = document.createElement("li");
+   li.id = newToDo.id;
    const span = document.createElement("span");
-   span.innerText = newToDo;
+   span.innerText = newToDo.text;
    const deletbtn = document.createElement("button");
    deletbtn.innerText = "❌";
    li.appendChild(span);
@@ -30,12 +33,23 @@ function addList(newToDo){
 function addToDo(event) {
    event.preventDefault();
     const newToDo = toDoInput.value;
-    toDos.push(newToDo);
-    toDoInput.value = "";
-    addList(newToDo);
+    toDoInput.value = "";    
+    const newTdoObj = {
+        text:newToDo,
+        id:Date.now(),
+    };                           
+    toDos.push(newTdoObj);
+    addList(newTdoObj);
     saveToDos();
-
 }
 
-
 toDoForm.addEventListener("submit",addToDo);
+
+const savedToDos = localStorage.getItem(TODO_KEY);
+
+if(savedToDos !== null){
+    const parseToDos = JSON.parse(savedToDos);
+    toDos = parseToDos;
+    parseToDos.forEach(addList);
+
+}
